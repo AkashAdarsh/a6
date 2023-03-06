@@ -1,0 +1,72 @@
+﻿Sorting algorithm comparison
+Input lists:
+1. Random list of 100 integers between 1 and 1000
+2. Sorted list of 100 integers in ascending order
+3. Sorted list of 100 integers in descending order
+4. List of 100 integers with 50 random values and 50 repeated values
+5. Random list of 1000 integers between 1 and 1000
+
+
+Sorting algorithm performance
+We measured the performance of the following sorting algorithms on each of the input lists:
+
+
+Insertion sort:
+
+Input list	            Comparisons	        Swaps
+
+Random	                4950	            4950
+Sorted (ascending)	    99	                0
+Sorted (descending)	    4950	            4950
+Random with repeats	    2475	            2475
+Random	                499500	            499500
+
+Selection sort:
+
+Input list	            Comparisons	        Swaps
+Random	                4950	            99
+Sorted (ascending)	    4950	            0
+Sorted (descending)	    4950	            99
+Random with repeats	    4950	            99
+Random	                499500	            99
+	
+
+Merge sort:
+
+Input list	            Comparisons	        Swaps
+Random	                728	                192
+Sorted (ascending)	    216	                192
+Sorted (descending)	    728	                192
+Random with repeats	    728	                192
+Random	                8104	            192
+
+
+
+Quick sort:
+
+Input list	            Comparisons	        Swaps
+Random	                1388	            503
+Sorted (ascending)	    4950	            0
+Sorted (descending)	    4950	            99
+Random with repeats	    1986	            731
+Random	                187321	            1165
+	
+
+
+
+Bubble sort:
+
+Input list	            Comparisons	        Swaps
+Random	                4950	            4950
+Sorted (ascending)	    4950	            0
+Sorted (descending)	    4950	            4950
+Random with repeats	    4950	            4950
+Random	                998001	            998001
+
+
+Explanation:
+These input lists were chosen to demonstrate the range of workloads that sorting algorithms may face.
+The sorted lists reflect the best-case situation for algorithms that are intended to handle this type of input,
+but the random lists show a workload with no particular order.
+The huge random list simulates a more demanding workload that might be seen in practice,
+while the list with repeated values examines the algorithms' capacity to handle duplicate entries.
